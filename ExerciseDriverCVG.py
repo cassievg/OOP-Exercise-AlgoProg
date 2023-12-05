@@ -1,4 +1,4 @@
-from ClassModuleCVG import Price
+from ClassModuleCVG import PriceCVG
 
 def select_itemsCVG():
     product_list = []
@@ -31,7 +31,7 @@ def show_listCVG(product_list):
     print("----------------------------------------")
     # Putting the Price into a new variable and displaying
     for item in product_list:
-        price_item = Price(name = item[0], amt = item[1])
+        price_item = PriceCVG(name = item[0], amt = item[1])
         # Printing everything according to list
         print(f"Food Name: {price_item.get_food_nameCVG()}")
         print(f"Amount: {price_item.get_food_amtCVG()}")
@@ -41,7 +41,7 @@ def show_listCVG(product_list):
 def calculated_final_costCVG(product_list):
     total = 0.00
     for item in product_list:
-        each_price = Price(name = item[0], amt = item[1]).calculate_costCVG()
+        each_price = PriceCVG(name = item[0], amt = item[1]).calculate_costCVG()
         total += each_price
     return total
 

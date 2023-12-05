@@ -1,4 +1,4 @@
-class Price:
+class PriceCVG:
     # Initialize
     def __init__(self, name, amt):
         self._food_name = name
